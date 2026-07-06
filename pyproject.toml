@@ -24,6 +24,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = ["pytest>=8.0", "ruff>=0.5"]
 demo = ["streamlit>=1.36"]
+proposal = ["markdown>=3.5", "xhtml2pdf>=0.2", "pypdf>=4.0"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

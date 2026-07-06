@@ -1,4 +1,4 @@
-﻿# VaRimi Sentinel
+# VaRimi Sentinel
 
 Offline-first **edge-AI crop-climate risk & market advisory** for Zimbabwe.
 POTRAZ AI4I Grand Challenge — **Track 3 (Development)**.
@@ -44,3 +44,13 @@ pytest
 ## Status
 Prototype / MVP under active build for the AI4I Grand Challenge. Synthetic data
 only; not for operational policy decisions.
+
+## Reproduce end-to-end
+```bash
+python -m varimi.model.train        # train + reports/model_report.md + metrics
+python -m varimi.synth.validate     # reports/synthetic_validation.md (C3)
+python -m varimi.edge.export        # models/*.onnx (parity-checked)
+python -m varimi.edge.benchmark     # reports/edge_benchmark.md (C4 budgets)
+streamlit run src/varimi/serving/app.py   # officer demo (needs .[demo])
+python scripts/build_proposal.py    # proposal/*_AI4I_Proposal_Development.pdf (needs .[proposal])
+```
