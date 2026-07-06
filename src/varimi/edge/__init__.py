@@ -1,0 +1,2 @@
+"""varimi.edge subpackage."""
+

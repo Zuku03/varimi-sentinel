@@ -1,0 +1,25 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Virtual env
+.venv/
+venv/
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Regenerated artifacts (models tracked selectively via -f)
+models/*.pkl
+models/*.joblib
+data/interim/
+data/processed/
+
+# OS
+.DS_Store
+Thumbs.db

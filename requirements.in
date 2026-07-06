@@ -1,0 +1,9 @@
+﻿# Top-level runtime dependencies (see requirements.lock for the pinned, resolved manifest).
+numpy>=1.26
+pandas>=2.1
+scikit-learn>=1.4
+scipy>=1.11
+onnx>=1.16
+onnxruntime>=1.18
+skl2onnx>=1.17
+matplotlib>=3.8
