@@ -1,0 +1,62 @@
+{
+  "n_train": 240,
+  "n_train_augmented": 480,
+  "n_test": 120,
+  "test_months": [
+    "2026-05",
+    "2026-06"
+  ],
+  "risk": {
+    "model_macro_f1": 0.5894372294372294,
+    "model_accuracy": 0.7416666666666667,
+    "baseline_macro_f1": 0.12612612612612614
+  },
+  "yield": {
+    "model_mae": 2.8751277707220453,
+    "model_r2": 0.2303652811778193,
+    "baseline_mae": 3.5440249999999995
+  },
+  "price": {
+    "model_macro_f1": 0.2845651080945199,
+    "baseline_macro_f1": 0.07407407407407407
+  },
+  "tstr_risk_macro_f1": {
+    "real_only": 0.41008454106280195,
+    "synth_only": 0.5207661546062076,
+    "real_plus_synth": 0.5894372294372294
+  },
+  "risk_permutation_importance": [
+    [
+      "pest_incidents_reported",
+      0.1589497885058543
+    ],
+    [
+      "ndvi_proxy_0_1",
+      0.1419836789594435
+    ],
+    [
+      "irrigation_coverage_pct",
+      0.08422303910868098
+    ],
+    [
+      "province",
+      0.024172647744198795
+    ],
+    [
+      "crop",
+      0.023898661304298175
+    ],
+    [
+      "input_availability_score_0_100",
+      0.017594302735403654
+    ],
+    [
+      "season",
+      0.0
+    ],
+    [
+      "rainfall_mm",
+      -0.004300166280548768
+    ]
+  ]
+}
