@@ -43,5 +43,4 @@ Top risk drivers (permutation importance): pest incidents, NDVI, irrigation.
 
 ## Ethical considerations
 No personal data. Aggregate-only. Advisory framing avoids over-reliance; the app
-shows the driver explanation and a confidence caveat. Fairness across provinces
-and settlement types is monitored (see the proposal's compliance section).
+shows the driver explanation and a confidence caveat. Per-province performance parity is measured on the held-out months (see "Performance parity by province" in `reports/model_report.md`); large gaps trigger review and retraining before any pilot.

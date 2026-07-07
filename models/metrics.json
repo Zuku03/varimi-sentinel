@@ -7,56 +7,108 @@
     "2026-06"
   ],
   "risk": {
-    "model_macro_f1": 0.5894372294372294,
-    "model_accuracy": 0.7416666666666667,
+    "model_macro_f1": 0.6232378228748464,
+    "model_accuracy": 0.725,
     "baseline_macro_f1": 0.12612612612612614
   },
   "yield": {
-    "model_mae": 2.8751277707220453,
-    "model_r2": 0.2303652811778193,
+    "model_mae": 3.216462377326543,
+    "model_r2": 0.031170802572195178,
     "baseline_mae": 3.5440249999999995
   },
   "price": {
-    "model_macro_f1": 0.2845651080945199,
+    "model_macro_f1": 0.294506698540764,
     "baseline_macro_f1": 0.07407407407407407
   },
   "tstr_risk_macro_f1": {
-    "real_only": 0.41008454106280195,
-    "synth_only": 0.5207661546062076,
-    "real_plus_synth": 0.5894372294372294
+    "real_only": 0.4471796731019064,
+    "synth_only": 0.5348148148148147,
+    "real_plus_synth": 0.6232378228748464
   },
   "risk_permutation_importance": [
     [
       "pest_incidents_reported",
-      0.1589497885058543
+      0.19588525238783802
     ],
     [
       "ndvi_proxy_0_1",
-      0.1419836789594435
+      0.17884254246710407
     ],
     [
       "irrigation_coverage_pct",
-      0.08422303910868098
-    ],
-    [
-      "province",
-      0.024172647744198795
+      0.10780024694994036
     ],
     [
       "crop",
-      0.023898661304298175
+      0.08068610229607731
     ],
     [
       "input_availability_score_0_100",
-      0.017594302735403654
+      0.04863914194986836
+    ],
+    [
+      "province",
+      0.024909824479845067
+    ],
+    [
+      "rainfall_mm",
+      0.00011944414361416688
     ],
     [
       "season",
       0.0
-    ],
-    [
-      "rainfall_mm",
-      -0.004300166280548768
     ]
-  ]
+  ],
+  "fairness_by_province": {
+    "Bulawayo": {
+      "n": 12,
+      "risk_macro_f1": 0.562962962962963,
+      "yield_mae": 3.1581964836866425
+    },
+    "Harare": {
+      "n": 12,
+      "risk_macro_f1": 0.5555555555555556,
+      "yield_mae": 2.6457319211191637
+    },
+    "Manicaland": {
+      "n": 12,
+      "risk_macro_f1": 0.4,
+      "yield_mae": 3.0732632419341215
+    },
+    "Mashonaland Central": {
+      "n": 12,
+      "risk_macro_f1": 0.34640522875817,
+      "yield_mae": 3.8328175877498727
+    },
+    "Mashonaland East": {
+      "n": 12,
+      "risk_macro_f1": 0.24561403508771928,
+      "yield_mae": 3.6764837058370765
+    },
+    "Mashonaland West": {
+      "n": 12,
+      "risk_macro_f1": 0.7333333333333334,
+      "yield_mae": 3.399285167387324
+    },
+    "Masvingo": {
+      "n": 12,
+      "risk_macro_f1": 0.9301587301587301,
+      "yield_mae": 3.9763418471142384
+    },
+    "Matabeleland North": {
+      "n": 12,
+      "risk_macro_f1": 0.6296296296296297,
+      "yield_mae": 2.9024748209294238
+    },
+    "Matabeleland South": {
+      "n": 12,
+      "risk_macro_f1": 0.5523809523809523,
+      "yield_mae": 2.4203059404585368
+    },
+    "Midlands": {
+      "n": 12,
+      "risk_macro_f1": 0.625,
+      "yield_mae": 3.0797230570490286
+    }
+  }
 }

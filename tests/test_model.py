@@ -26,3 +26,14 @@ def test_encode_width_matches_feature_order():
     model.fit_encoder(enriched)
     x = model.encode(enriched.head(5))
     assert x.shape == (5, len(FEATURE_ORDER))
+
+def test_fairness_block_in_metrics():
+    import json
+
+    metrics = json.loads(
+        (config.MODELS_DIR / "metrics.json").read_text(encoding="utf-8")
+    )
+    fairness = metrics["fairness_by_province"]
+    assert len(fairness) >= 2
+    for stats in fairness.values():
+        assert set(stats) == {"n", "risk_macro_f1", "yield_mae"}

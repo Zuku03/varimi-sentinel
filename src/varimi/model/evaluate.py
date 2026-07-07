@@ -106,8 +106,23 @@ def run() -> dict:
         reverse=True,
     )
 
-    metrics = {
-        "n_train": int(len(train)),
+    # --- Fairness: performance parity across provinces on held-out months ---
+    fairness = {}
+    for prov, grp in test.groupby("province"):
+        pos = grp.index.to_numpy()  # test index is reset, so positional
+        fairness[prov] = {
+            "n": int(len(grp)),
+            "risk_macro_f1": _macro_f1(
+                grp[config.TARGET_RISK], preds[config.TARGET_RISK][pos]
+            ),
+            "yield_mae": float(
+                mean_absolute_error(
+                    grp[config.TARGET_YIELD], preds[config.TARGET_YIELD][pos]
+                )
+            ),
+        }
+
+    metrics = {        "n_train": int(len(train)),
         "n_train_augmented": int(len(risk_yield_train)),
         "n_test": int(len(test)),
         "test_months": sorted(test["month"].unique().tolist()),
@@ -124,7 +139,7 @@ def run() -> dict:
         "price": {"model_macro_f1": price_f1, "baseline_macro_f1": base_price_f1},
         "tstr_risk_macro_f1": tstr,
         "risk_permutation_importance": importances,
-    }
+        "fairness_by_province": fairness,    }
 
     config.MODELS_DIR.mkdir(parents=True, exist_ok=True)
     config.REPORTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -200,8 +215,21 @@ def _write_report(m: dict) -> None:
         "shows to extension officers (e.g. 'high risk driven by low NDVI and",
         "rising pest incidents').",
     ]
+    lines += [
+        "",
+        "## 4. Performance parity by province (fairness check)",
+        "",
+        "Held-out performance by province. Small per-province samples make these",
+        "noisy; large gaps trigger review and retraining before any pilot.",
+        "",
+        _row(["Province", "n", "Risk macro-F1", "Yield MAE"]),
+        "|---|---|---|---|",
+    ]
+    for prov, f in sorted(m["fairness_by_province"].items()):
+        lines.append(
+            _row([prov, str(f["n"]), f"{f['risk_macro_f1']:.3f}", f"{f['yield_mae']:.3f}"])
+        )
     (config.REPORTS_DIR / "model_report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
-
 
 if __name__ == "__main__":
     result = run()
