@@ -33,3 +33,13 @@ and the model is as small as the job allows.
 The price-direction head is a weak signal on this small synthetic sample and is
 presented as directional only. We report it rather than drop it, and the product
 surfaces it with an explicit caveat.
+## 5. What the metrics do and do not prove (validity statement)
+
+Dataset 02 is synthetic: its outcome columns were authored by a data generator,
+so the relationships the model learns are the generator's, not nature's. The
+lift table above therefore proves the pipeline is sound (leakage-controlled,
+time-aware, reproducible) and that the method extracts multivariate structure a
+rule table cannot - it does not prove field predictive validity, which no team
+can honestly claim from this dataset. Milestones M1-M2 of the roadmap replace
+the synthetic targets with observed district data and re-run this same
+evaluation harness unchanged.
