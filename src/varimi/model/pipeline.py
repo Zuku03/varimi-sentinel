@@ -6,10 +6,12 @@ Design choices tuned for the AI4I Track-3 edge use-case:
     small, tabular and heterogeneous - gradient-boosted trees are the right-sized
     method (no "sledgehammer"), they train in milliseconds and export to a tiny
     ONNX graph for edge inference.
-  * Categoricals are ordinal-encoded and handled natively by HGB
-    (``categorical_features``). The encoder vocabulary is fit on the full known
-    category set (province / crop / season are fixed, a-priori vocabularies, not
-    outcomes) so held-out months never produce unseen codes.
+  * Categoricals (province / crop / season) are ordinal-encoded and treated by the
+    tree ensemble as ordered numeric codes. We deliberately do NOT use HGB's native
+    categorical split support: it does not round-trip through skl2onnx (the ONNX
+    TreeEnsemble would mis-predict), and on this data the ordinal-numeric treatment
+    scores at least as well. This keeps the trained model and its ONNX edge export
+    bit-for-bit faithful.
 """
 
 from __future__ import annotations
@@ -21,33 +23,23 @@ from sklearn.preprocessing import OrdinalEncoder
 
 from varimi import config
 
-_N_NUM = len(config.NUM_FEATURES)
-_CAT_IDX = list(range(_N_NUM, _N_NUM + len(config.CAT_FEATURES)))
 FEATURE_ORDER = config.NUM_FEATURES + config.CAT_FEATURES
+
+_HGB_KWARGS = dict(
+    learning_rate=0.08,
+    max_iter=300,
+    max_leaf_nodes=15,
+    min_samples_leaf=15,
+    l2_regularization=1.0,
+)
 
 
 def _new_classifier(seed: int) -> HistGradientBoostingClassifier:
-    return HistGradientBoostingClassifier(
-        categorical_features=_CAT_IDX,
-        learning_rate=0.08,
-        max_iter=300,
-        max_leaf_nodes=15,
-        min_samples_leaf=15,
-        l2_regularization=1.0,
-        random_state=seed,
-    )
+    return HistGradientBoostingClassifier(random_state=seed, **_HGB_KWARGS)
 
 
 def _new_regressor(seed: int) -> HistGradientBoostingRegressor:
-    return HistGradientBoostingRegressor(
-        categorical_features=_CAT_IDX,
-        learning_rate=0.08,
-        max_iter=300,
-        max_leaf_nodes=15,
-        min_samples_leaf=15,
-        l2_regularization=1.0,
-        random_state=seed,
-    )
+    return HistGradientBoostingRegressor(random_state=seed, **_HGB_KWARGS)
 
 
 class VarimiModel:

@@ -1,4 +1,4 @@
-﻿# Python
+# Python
 __pycache__/
 *.py[cod]
 *.egg-info/
@@ -15,6 +15,7 @@ venv/
 .ipynb_checkpoints/
 
 # Regenerated artifacts (models tracked selectively via -f)
+models/*.onnx
 models/*.pkl
 models/*.joblib
 data/interim/
