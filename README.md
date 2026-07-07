@@ -54,3 +54,8 @@ python -m varimi.edge.benchmark     # reports/edge_benchmark.md (C4 budgets)
 streamlit run src/varimi/serving/app.py   # officer demo (needs .[demo])
 python scripts/build_proposal.py    # proposal/*_AI4I_Proposal_Development.pdf (needs .[proposal])
 ```
+## Android device harness
+`android/` contains a minimal, buildable Kotlin harness (ONNX Runtime Mobile,
+bundled models, Logcat latency logging) for hardware-in-the-loop validation on
+a low-end device. Status: scaffold, not compile-verified here — see
+`android/README.md` for build steps and the honest caveat.

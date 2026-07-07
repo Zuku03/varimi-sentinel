@@ -124,7 +124,14 @@ def _write_report(r: dict) -> None:
         "fp32 tree graph. It already meets the RAM budget by more than two orders "
         "of magnitude and runs far under the latency budget on CPU, so no "
         "quantization is required to fit the edge device.",
-    ]
+        "",
+        "## Device validation status",
+        "",
+        "These numbers are measured on x86_64 CPU (development machine). A",
+        "buildable Android harness ships in `android/` (ONNX Runtime Mobile,",
+        "bundled models, per-advisory latency logging via Logcat tag",
+        "`VaRimiBench`) for true hardware-in-the-loop validation on a low-end",
+        "device at milestone M3.",    ]
     config.REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     (config.REPORTS_DIR / "edge_benchmark.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
