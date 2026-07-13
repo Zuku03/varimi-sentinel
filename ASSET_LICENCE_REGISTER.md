@@ -40,3 +40,10 @@ as required by the Track 3 Technical Delivery Standards.
 | (proposal typography) Avenir or Arial | Per POTRAZ format spec | Used in final PDF only |
 
 _No third-party pre-trained weights, proprietary datasets, or copyrighted media are used._
+
+## Development tooling disclosure
+AI-assisted coding tools (Anthropic Claude) were used during development, as
+disclosed here and in the repository's commit trailers. All architecture
+decisions, validation, testing and domain framing are the team's own work, and
+the team maintains and can fully explain every component. The product itself
+contains no generative AI and ships no prompts.

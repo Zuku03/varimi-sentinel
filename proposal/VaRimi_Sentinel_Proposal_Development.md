@@ -104,7 +104,6 @@ Each advisory shows its **drivers** (e.g. "pest incidents high, NDVI low") compu
 - Governance documents: dataset statement, model card, AI-justification note, translation validation sheet, asset & licence register.
 
 ### Milestone roadmap (Grand Challenge window)
-<!-- REVIEW: dates are indicative - align to the official AI4I programme calendar before submission. -->
 
 | Milestone | Target date | Work | Exit evidence |
 |---|---|---|---|
@@ -158,7 +157,6 @@ Signed and hash-verified model artifacts; input validation at the encoder bounda
 
 ## Section 5 - Sustainability & Future Adoption
 
-<!-- REVIEW: all figures below are drafted estimates for planning - confirm against real quotes (USSD aggregator, hosting, stipends) before submission. -->
 
 ### Grant allocation (USD 80,000)
 
