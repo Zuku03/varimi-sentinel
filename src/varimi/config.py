@@ -9,7 +9,22 @@ from __future__ import annotations
 from pathlib import Path
 
 # --- Paths ---------------------------------------------------------------
-REPO_ROOT = Path(__file__).resolve().parents[2]
+def _detect_repo_root() -> Path:
+    """Workspace root that holds data/, models/, reports/.
+
+    In a source/editable checkout this is two levels above this file. When the
+    package is pip-installed into site-packages (e.g. Streamlit Cloud installs
+    via requirements.txt), that path points inside the venv - fall back to the
+    process working directory, which cloud runners set to the repo mount.
+    """
+    candidates = [Path(__file__).resolve().parents[2], Path.cwd()]
+    for cand in candidates:
+        if (cand / "data" / "challenge").exists() or (cand / "pyproject.toml").exists():
+            return cand
+    return candidates[0]
+
+
+REPO_ROOT = _detect_repo_root()
 DATASETS_DIR = REPO_ROOT.parent / "Datasets"
 _EMBEDDED_DATA = REPO_ROOT / "data" / "challenge"
 
