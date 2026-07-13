@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="varimi_green">#2E7D32</color>
+    <color name="varimi_green_container">#C8E6C9</color>
+    <color name="risk_low">#2E7D32</color>
+    <color name="risk_medium">#F9A825</color>
+    <color name="risk_high">#C62828</color>
+    <color name="action_bg">#E8F5E9</color>
+</resources>

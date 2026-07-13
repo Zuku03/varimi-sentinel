@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.VaRimi" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/varimi_green</item>
+        <item name="colorPrimaryContainer">@color/varimi_green_container</item>
+    </style>
+</resources>

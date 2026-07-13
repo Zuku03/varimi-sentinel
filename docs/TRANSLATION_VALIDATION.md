@@ -51,5 +51,8 @@ source data (English), e.g. "Maize", "Mutare".
 | Shona | | | | |
 | Ndebele | | | | |
 
+These strings also flow to the Android app via `scripts/sync_android_assets.py`
+(assets/strings.json) - re-run it after merging corrections.
+
 After corrections are merged into `src/varimi/serving/advisory.py`, update the
 Status line at the top of this file to VALIDATED with the sign-off date.

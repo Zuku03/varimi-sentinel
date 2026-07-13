@@ -34,6 +34,14 @@ Each line reports `advisory_ms` for a full three-head advisory. Record the
 median/p95 on the target low-end device and update
 `reports/edge_benchmark.md` ("Device validation status").
 
+## UI and localization
+The app uses Material Design 3 (top bar, language chips EN/chiShona/isiNdebele,
+dropdown pickers, result cards) and renders the SAME advisory as the web side:
+localized lead, driver explanations and recommended action. All advisory wording
+comes from `assets/strings.json`, generated from the Python catalogs - re-run
+`python scripts/sync_android_assets.py` after any translation change so the app
+picks up validated strings.
+
 ## Feature-layout contract
 The Kotlin feature vector mirrors `varimi.model.pipeline.FEATURE_ORDER`
 (5 numerics + province/crop/season ordinal codes). Codes come from

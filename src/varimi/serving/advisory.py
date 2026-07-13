@@ -119,7 +119,11 @@ def _drivers(row: pd.Series, enriched: pd.DataFrame) -> list[dict]:
 
 
 def _action_keys(risk: str, price: str, drivers: list[dict]) -> list[str]:
-    """Pick the action-catalog keys for this prediction (language-independent)."""
+    """Pick the action-catalog keys for this prediction (language-independent).
+
+    Mirrored in Kotlin (android/.../MainActivity.kt, actionKeys()) - keep both
+    in sync. The string catalogs flow to the app via scripts/sync_android_assets.py.
+    """
     bad = {d["feature"] for d in drivers if d["unfavourable"]}
     keys: list[str] = []
     if risk == "High":
