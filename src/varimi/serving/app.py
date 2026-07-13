@@ -8,6 +8,16 @@ dataset-02 (synthetic).
 
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
+# Streamlit Cloud runs this file from the repo clone without installing the
+# package; put src/ on the path so `varimi` resolves from source (fresh on
+# every push - no stale site-packages copy). Harmless in local editable runs.
+_SRC = str(Path(__file__).resolve().parents[2])
+if _SRC not in sys.path:
+    sys.path.insert(0, _SRC)
+
 import pandas as pd
 import streamlit as st
 
