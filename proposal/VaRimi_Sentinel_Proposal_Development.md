@@ -4,7 +4,7 @@
 
 **Track:** Track 3 (Development)
 **Team Name:** VaRimi Sentinel Team
-**Lead Innovator:** [LEAD_INNOVATOR_NAME]
+**Lead Innovator:** Chrispen Nyanhete
 **Date:** 7 July 2026
 
 **Repository:** [GIT_URL] &nbsp;|&nbsp; **Live demo:** [DEMO_URL]
@@ -120,14 +120,16 @@ Training is CPU-only and completes in seconds, so our ZCHPC CCE footprint is del
 ZCHPC CCE access; AGRITEX district partnership (M1); AMA/market price data access (M2); USSD short-code via a local aggregator (M3).
 
 ### Team & delivery capability
-<!-- REVIEW: fill in real team details - 2 to 5 Zimbabwean citizens per the eligibility rules; remove this comment before export. -->
+<!-- REVIEW: add one-line credentials per member; both members must be Zimbabwean citizens/residents per eligibility rules. -->
 
 | Member | Role | Relevant credentials |
 |---|---|---|
-| [LEAD_INNOVATOR_NAME] | Lead innovator / ML engineering | [CREDENTIALS] |
-| [TEAM_MEMBER_2] | Mobile & systems engineering | [CREDENTIALS] |
-| [TEAM_MEMBER_3] | Agronomy / extension liaison | [CREDENTIALS] |
-| [TEAM_MEMBER_4] | Language & accessibility | [CREDENTIALS] |
+| Chrispen Nyanhete | Lead Innovator - product, ML engineering, on-device validation | [CREDENTIALS] |
+| Tendai Nyebera | Co-innovator - engineering & delivery | [CREDENTIALS] |
+
+Specialist capacity the core team does not carry in-house - agronomy/extension
+liaison and native-language validation - is deliberately budgeted as contracted
+expertise in Section 5 rather than claimed as team skills.
 
 The repository itself is offered as the primary evidence of delivery capability: locked dependencies, CI, 23 automated tests, parity-checked model export and honest reporting of weak results demonstrate the engineering discipline the team will apply through M1-M4.
 
@@ -164,7 +166,7 @@ Signed and hash-verified model artifacts; input validation at the encoder bounda
 
 | Line | Amount | Notes |
 |---|---|---|
-| Personnel (4 members, part-time, 12 months) | 38,000 | ML, mobile, agronomy liaison, language/accessibility |
+| Personnel (2 core members, part-time, 12 months) | 38,000 | ML, mobile and delivery; includes contracted agronomy/extension specialist time |
 | Field calibration pilot (2 districts) | 14,000 | Travel, enumerators, officer stipends, data collection |
 | USSD short-code + aggregator fees (12 months) | 6,000 | Setup + session fees |
 | Training & documentation for extension officers | 5,000 | Workshops, printed quick-reference cards |
