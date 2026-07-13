@@ -7,7 +7,7 @@
 **Lead Innovator:** Chrispen Nyanhete
 **Date:** 7 July 2026
 
-**Repository:** [GIT_URL] &nbsp;|&nbsp; **Live demo:** [DEMO_URL]
+**Repository:** https://github.com/Zuku03/varimi-sentinel &nbsp;|&nbsp; **Live demo:** https://varimisentinel.streamlit.app
 
 *Prototype built on the official AI4I synthetic dataset pack (dataset 02). All data is synthetic aggregate and not official statistics.*
 
@@ -100,7 +100,7 @@ Each advisory shows its **drivers** (e.g. "pest incidents high, NDVI low") compu
 - Reproducible **training + evaluation** pipeline (`python -m varimi.model.train`) emitting `reports/model_report.md`, including a **per-province performance-parity (fairness) table**.
 - **Synthetic data generator + validation** (`reports/synthetic_validation.md`: all 7 KS marginal tests pass; correlation-delta heatmap).
 - **ONNX edge export with a parity test** and an **automated edge benchmark** (`reports/edge_benchmark.md`).
-- **Advisory service (en/sn/nd), USSD flow, Streamlit officer cockpit** ([DEMO_URL]), and a **buildable Android device harness** with an asset-sync script.
+- **Advisory service (en/sn/nd), USSD flow, Streamlit officer cockpit** (https://varimisentinel.streamlit.app), and a **buildable Android device harness** with an asset-sync script.
 - Governance documents: dataset statement, model card, AI-justification note, translation validation sheet, asset & licence register.
 
 ### Milestone roadmap (Grand Challenge window)
