@@ -120,12 +120,10 @@ Training is CPU-only and completes in seconds, so our ZCHPC CCE footprint is del
 ZCHPC CCE access; AGRITEX district partnership (M1); AMA/market price data access (M2); USSD short-code via a local aggregator (M3).
 
 ### Team & delivery capability
-<!-- REVIEW: add one-line credentials per member; both members must be Zimbabwean citizens/residents per eligibility rules. -->
-
 | Member | Role | Relevant credentials |
 |---|---|---|
-| Chrispen Nyanhete | Lead Innovator - product, ML engineering, on-device validation | [CREDENTIALS] |
-| Tendai Nyebera | Co-innovator - engineering & delivery | [CREDENTIALS] |
+| Chrispen Nyanhete | Lead Innovator - product, ML engineering, on-device validation | BSc Information Technology; MSc Big Data Technologies |
+| Tendai Nyebera | Co-innovator - engineering & delivery | BSc Electronic Engineering |
 
 Specialist capacity the core team does not carry in-house - agronomy/extension
 liaison and native-language validation - is deliberately budgeted as contracted
