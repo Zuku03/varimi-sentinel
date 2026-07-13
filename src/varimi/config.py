@@ -8,6 +8,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
+
 # --- Paths ---------------------------------------------------------------
 def _detect_repo_root() -> Path:
     """Workspace root that holds data/, models/, reports/.
