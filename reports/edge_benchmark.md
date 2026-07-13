@@ -18,16 +18,16 @@ Total footprint: **1.82 MB**.
 
 | Statistic | ms |
 |---|---|
-| Median | 0.057 |
-| p95 | 0.096 |
-| Max | 35.785 |
+| Median | 0.060 |
+| p95 | 0.102 |
+| Max | 29.390 |
 
 ## Budget verdict (Track-3 C4)
 
 | Budget | Limit | Measured | Pass |
 |---|---|---|---|
 | Model footprint (RAM proxy) | < 256 MB | 1.82 MB | YES |
-| Latency (p95) | < 100 ms | 0.096 ms | YES |
+| Latency (p95) | < 100 ms | 0.102 ms | YES |
 
 ## Note on int8 quantization
 
