@@ -11,8 +11,21 @@ from pathlib import Path
 # --- Paths ---------------------------------------------------------------
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DATASETS_DIR = REPO_ROOT.parent / "Datasets"
-DATA_02 = DATASETS_DIR / "02_agriculture_climate_market_signals.csv"
-DATA_DICTIONARY = DATASETS_DIR / "00_data_dictionary.csv"
+_EMBEDDED_DATA = REPO_ROOT / "data" / "challenge"
+
+
+def _first_existing(*candidates: Path) -> Path:
+    return next((p for p in candidates if p.exists()), candidates[0])
+
+
+DATA_02 = _first_existing(
+    _EMBEDDED_DATA / "02_agriculture_climate_market_signals.csv",
+    DATASETS_DIR / "02_agriculture_climate_market_signals.csv",
+)
+DATA_DICTIONARY = _first_existing(
+    _EMBEDDED_DATA / "00_data_dictionary.csv",
+    DATASETS_DIR / "00_data_dictionary.csv",
+)
 
 MODELS_DIR = REPO_ROOT / "models"
 REPORTS_DIR = REPO_ROOT / "reports"

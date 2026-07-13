@@ -1,0 +1,96 @@
+dataset_file,field_name,data_type,description,example
+01_public_service_requests.csv,month,YYYY-MM string,Reporting month,2026-03
+01_public_service_requests.csv,province,Text,Zimbabwe province used for aggregation,Manicaland
+01_public_service_requests.csv,district,Text,District or service area used for aggregation,Mutare
+01_public_service_requests.csv,latitude,Decimal,"Approximate centroid latitude for mapping, synthetic and not official",-18.9707
+01_public_service_requests.csv,longitude,Decimal,"Approximate centroid longitude for mapping, synthetic and not official",32.6709
+01_public_service_requests.csv,settlement_type,Category,"Urban, peri-urban, rural, or border classification",Urban
+01_public_service_requests.csv,service_category,Category,Public service category,Water & sanitation
+01_public_service_requests.csv,primary_channel,Category,Most used request channel,WhatsApp
+01_public_service_requests.csv,requests_received,Integer,Number of aggregate service requests received,842
+01_public_service_requests.csv,requests_resolved,Integer,Number of requests marked resolved,690
+01_public_service_requests.csv,avg_resolution_days,Decimal,Average time to resolve requests in days,5.4
+01_public_service_requests.csv,pct_resolved_on_time,Percent,Share of requests resolved within service target,72.5
+01_public_service_requests.csv,unresolved_backlog,Integer,Outstanding unresolved request count,152
+01_public_service_requests.csv,citizen_satisfaction_1_5,Decimal,Average satisfaction score from 1 low to 5 high,3.6
+01_public_service_requests.csv,priority_flag,Category,Operational priority flag based on backlog and satisfaction,Watch
+02_agriculture_climate_market_signals.csv,month,YYYY-MM string,Reporting month,2026-03
+02_agriculture_climate_market_signals.csv,province,Text,Zimbabwe province used for aggregation,Manicaland
+02_agriculture_climate_market_signals.csv,district,Text,District or service area used for aggregation,Mutare
+02_agriculture_climate_market_signals.csv,latitude,Decimal,"Approximate centroid latitude for mapping, synthetic and not official",-18.9707
+02_agriculture_climate_market_signals.csv,longitude,Decimal,"Approximate centroid longitude for mapping, synthetic and not official",32.6709
+02_agriculture_climate_market_signals.csv,crop,Category,Crop covered by the observation,Maize
+02_agriculture_climate_market_signals.csv,rainfall_mm,Decimal,Monthly rainfall proxy in millimetres,74.2
+02_agriculture_climate_market_signals.csv,ndvi_proxy_0_1,Decimal,Vegetation index proxy from 0 to 1,0.44
+02_agriculture_climate_market_signals.csv,pest_incidents_reported,Integer,Reported pest issue count,12
+02_agriculture_climate_market_signals.csv,irrigation_coverage_pct,Percent,Estimated share of crop area with irrigation support,28.0
+02_agriculture_climate_market_signals.csv,input_availability_score_0_100,Decimal,"Score for seed, fertilizer, agrochemical and advisory access",63.5
+02_agriculture_climate_market_signals.csv,avg_farmgate_price_usd_per_tonne,Currency,Average farmgate price proxy,315.75
+02_agriculture_climate_market_signals.csv,estimated_yield_t_per_ha,Decimal,Yield proxy in tonnes per hectare,2.15
+02_agriculture_climate_market_signals.csv,climate_crop_risk_score_0_100,Decimal,Composite risk score where 100 is highest risk,71.4
+02_agriculture_climate_market_signals.csv,risk_level,Category,"Low, Medium, or High risk band",High
+03_health_access_digital_readiness_aggregate.csv,month,YYYY-MM string,Reporting month,2026-03
+03_health_access_digital_readiness_aggregate.csv,province,Text,Zimbabwe province used for aggregation,Manicaland
+03_health_access_digital_readiness_aggregate.csv,district,Text,District or service area used for aggregation,Mutare
+03_health_access_digital_readiness_aggregate.csv,latitude,Decimal,"Approximate centroid latitude for mapping, synthetic and not official",-18.9707
+03_health_access_digital_readiness_aggregate.csv,longitude,Decimal,"Approximate centroid longitude for mapping, synthetic and not official",32.6709
+03_health_access_digital_readiness_aggregate.csv,settlement_type,Category,"Urban, peri-urban, rural, or border classification",Rural
+03_health_access_digital_readiness_aggregate.csv,facility_type,Category,Aggregate health facility type,Clinic
+03_health_access_digital_readiness_aggregate.csv,outpatient_visits,Integer,Monthly outpatient visit count,1200
+03_health_access_digital_readiness_aggregate.csv,avg_wait_minutes,Decimal,Average patient waiting time in minutes,89.5
+03_health_access_digital_readiness_aggregate.csv,essential_medicine_stockout_days,Integer,Days with essential medicine stockout,7
+03_health_access_digital_readiness_aggregate.csv,telehealth_consultations,Integer,Remote consultations recorded,136
+03_health_access_digital_readiness_aggregate.csv,network_uptime_pct,Percent,Connectivity uptime at facility level,82.0
+03_health_access_digital_readiness_aggregate.csv,referral_completion_pct,Percent,Share of referrals completed,74.2
+03_health_access_digital_readiness_aggregate.csv,patient_satisfaction_1_5,Decimal,Aggregate satisfaction score from 1 low to 5 high,3.4
+03_health_access_digital_readiness_aggregate.csv,service_pressure_level,Category,"Low, Medium, or High operational pressure",Medium
+04_tourism_destination_insights.csv,month,YYYY-MM string,Reporting month,2026-05
+04_tourism_destination_insights.csv,destination,Text,Tourism destination or route,Great Zimbabwe
+04_tourism_destination_insights.csv,province,Text,Province,Masvingo
+04_tourism_destination_insights.csv,district,Text,District or nearby service area,Masvingo
+04_tourism_destination_insights.csv,latitude,Decimal,"Approximate centroid latitude for mapping, synthetic and not official",-20.0744
+04_tourism_destination_insights.csv,longitude,Decimal,"Approximate centroid longitude for mapping, synthetic and not official",30.8328
+04_tourism_destination_insights.csv,destination_type,Category,Tourism segment,Cultural heritage
+04_tourism_destination_insights.csv,visitor_count,Integer,Estimated monthly visitor count,3210
+04_tourism_destination_insights.csv,domestic_visitor_share_pct,Percent,Share of visitors from local or domestic market,62.4
+04_tourism_destination_insights.csv,accommodation_occupancy_pct,Percent,Estimated occupancy rate,54.1
+04_tourism_destination_insights.csv,avg_spend_usd_per_visitor,Currency,Estimated spend per visitor in USD,78.25
+04_tourism_destination_insights.csv,transport_access_score_0_100,Decimal,Access quality score,68.2
+04_tourism_destination_insights.csv,service_quality_score_0_100,Decimal,Service quality score,76.5
+04_tourism_destination_insights.csv,digital_booking_share_pct,Percent,Share of bookings through digital channels,42.7
+04_tourism_destination_insights.csv,top_complaint_theme,Category,Most frequent complaint category,Connectivity
+04_tourism_destination_insights.csv,estimated_total_spend_usd,Currency,visitor_count multiplied by avg_spend_usd_per_visitor,251182.50
+05_future_skills_training_outcomes.csv,month,YYYY-MM string,Reporting month,2026-03
+05_future_skills_training_outcomes.csv,province,Text,Zimbabwe province used for aggregation,Manicaland
+05_future_skills_training_outcomes.csv,district,Text,District or service area used for aggregation,Mutare
+05_future_skills_training_outcomes.csv,latitude,Decimal,"Approximate centroid latitude for mapping, synthetic and not official",-18.9707
+05_future_skills_training_outcomes.csv,longitude,Decimal,"Approximate centroid longitude for mapping, synthetic and not official",32.6709
+05_future_skills_training_outcomes.csv,settlement_type,Category,"Urban, peri-urban, rural, or border classification",Urban
+05_future_skills_training_outcomes.csv,institution_type,Category,Delivery institution type,Innovation hub
+05_future_skills_training_outcomes.csv,programme_area,Category,Training programme focus,Data analytics
+05_future_skills_training_outcomes.csv,enrolments,Integer,Learners enrolled during the month,128
+05_future_skills_training_outcomes.csv,completions,Integer,Learners who completed the programme,91
+05_future_skills_training_outcomes.csv,completion_rate_pct,Percent,Completion rate,71.1
+05_future_skills_training_outcomes.csv,female_participation_pct,Percent,Female learner participation share,48.2
+05_future_skills_training_outcomes.csv,rural_participation_pct,Percent,Rural learner participation share,44.0
+05_future_skills_training_outcomes.csv,online_learning_share_pct,Percent,Share of learning delivered online,55.5
+05_future_skills_training_outcomes.csv,certification_rate_pct,Percent,Share of learners certified,64.2
+05_future_skills_training_outcomes.csv,job_or_attachment_placement_rate_pct,Percent,"Share placed into jobs, attachments or projects",32.4
+05_future_skills_training_outcomes.csv,top_participation_barrier,Category,Main barrier reported by learners,Connectivity cost
+06_local_language_accessibility_feedback.csv,month,YYYY-MM string,Reporting month,2026-03
+06_local_language_accessibility_feedback.csv,province,Text,Zimbabwe province used for aggregation,Manicaland
+06_local_language_accessibility_feedback.csv,district,Text,District or service area used for aggregation,Mutare
+06_local_language_accessibility_feedback.csv,latitude,Decimal,"Approximate centroid latitude for mapping, synthetic and not official",-18.9707
+06_local_language_accessibility_feedback.csv,longitude,Decimal,"Approximate centroid longitude for mapping, synthetic and not official",32.6709
+06_local_language_accessibility_feedback.csv,settlement_type,Category,"Urban, peri-urban, rural, or border classification",Rural
+06_local_language_accessibility_feedback.csv,language_code,Text,"Language code, local language tags included where applicable",sn
+06_local_language_accessibility_feedback.csv,language_name,Text,Language name,Shona
+06_local_language_accessibility_feedback.csv,channel,Category,Digital or assisted service channel,USSD
+06_local_language_accessibility_feedback.csv,content_type,Category,Type of content accessed,Agriculture advisory
+06_local_language_accessibility_feedback.csv,interactions,Integer,Number of interactions,820
+06_local_language_accessibility_feedback.csv,query_success_rate_pct,Percent,Share of interactions with successful answer or completion,75.1
+06_local_language_accessibility_feedback.csv,unresolved_query_rate_pct,Percent,Share of unresolved interactions,24.9
+06_local_language_accessibility_feedback.csv,accessibility_issues_reported,Integer,Reported accessibility issues,18
+06_local_language_accessibility_feedback.csv,sentiment_score_minus1_to_1,Decimal,Aggregate sentiment from -1 negative to +1 positive,0.42
+06_local_language_accessibility_feedback.csv,assistive_feature_usage_pct,Percent,"Use of accessibility features such as voice, simplified text or screen reader support",22.5
+06_local_language_accessibility_feedback.csv,priority_improvement_area,Category,Main service improvement theme,Voice support

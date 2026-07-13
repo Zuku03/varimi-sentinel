@@ -89,7 +89,13 @@ _DRIVER_FEATURES = ("pest_incidents_reported", "ndvi_proxy_0_1", "irrigation_cov
 def _context():
     import joblib
 
-    model = joblib.load(config.MODELS_DIR / "varimi_model.joblib")
+    model_path = config.MODELS_DIR / "varimi_model.joblib"
+    if not model_path.exists():
+        # Bare clone (CI / cloud demo): train deterministically on first boot.
+        from varimi.model import evaluate
+
+        evaluate.run()
+    model = joblib.load(model_path)
     enriched = build.build(loader.load_raw())
     return model, enriched
 
